@@ -9,7 +9,7 @@ from random import shuffle
 output_dir = "output"
 origin_dir = "assets"
 background_name = "background.png"
-count_of_objects = 9
+count_of_objects = 8
 
 max_rotation_angel = 90
 min_rotation_angel = 0
@@ -57,7 +57,7 @@ for img_name in objects_names_array:
 background_img.show()
 
 # Writing data
-background_img.save(f"{output_dir}/output.png")
-with open(f"{output_dir}/map.txt", 'w') as out:
+background_img.save(f"{output_dir}/outputPicture.png")
+with open(f"{output_dir}/description.txt", 'w') as out:
     for img_idx in range(len(objects_names_array)):
         out.write(f"{offsets[img_idx]};{rotations[img_idx]};{names[img_idx]}\n")
