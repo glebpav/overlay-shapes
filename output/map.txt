@@ -1,0 +1,9 @@
+(281, 238);60;beet.png
+(813, 130);44;pumpkin.png
+(433, 110);19;cabbage.png
+(697, 270);13;cauliflower.png
+(804, 215);70;carrot.png
+(381, 193);40;broccoli.png
+(741, 201);43;peas.png
+(255, 164);13;corn.png
+(745, 251);90;peper.png
