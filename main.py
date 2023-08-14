@@ -37,11 +37,11 @@ names = []
 # starting at coordinates (0, 0)
 for img_name in objects_names_array:
     img = Image.open(f"{origin_dir}/{img_name}").convert("RGBA")
-    img_width, img_height = img.size
 
     # Rotate image
     rotation_angel = random.randint(min_rotation_angel, max_rotation_angel)
     img = img.rotate(rotation_angel, expand=True)
+    img_width, img_height = img.size
 
     # Finding coordinates
     new_x = random.randint(padding, bg_width - padding - img_width)
