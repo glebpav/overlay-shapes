@@ -1,8 +1,8 @@
-(487, 209);73;beet.png
-(469, 88);41;cauliflower.png
-(560, 79);83;broccoli.png
-(529, 117);27;cabbage.png
-(643, 197);7;pumpkin.png
-(737, 107);11;corn.png
-(293, 115);0;carrot.png
-(60, 199);67;eggplant.png
+(596, 288);64;eggplant.png
+(718, 15);74;pumpkin.png
+(193, 280);4;cabbage.png
+(431, 91);60;carrot.png
+(273, 291);57;peas.png
+(16, 169);54;beet.png
+(773, 95);70;corn.png
+(387, 54);64;cauliflower.png

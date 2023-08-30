@@ -14,19 +14,12 @@ count_of_objects = 8
 max_rotation_angel = 90
 min_rotation_angel = 0
 
-padding = 50
-padding_vertical = 200
-padding_horizontal = 200
+padding_vertical = 150
+padding_horizontal = 300
 pixel_error_horizontal = 30
 pixel_error_vertical = 30
 
 # --------  EXECUTION  --------
-
-
-def get_center_c(x, y, img, bg_img):
-    x = x - int(img.width / 2)
-    y = bg_img.height - y - int(img.height / 2)
-    return (x, y)
 
 # Getting all images names
 objects_names_array = os.listdir(origin_dir)
@@ -67,12 +60,12 @@ for img_idx, img_name in enumerate(objects_names_array):
     img_width, img_height = img.size
 
     # Finding coordinates
-    new_x = int(base_x[img_idx] + random.randint(-pixel_error_horizontal, pixel_error_horizontal))
-    new_y = int(base_y[img_idx] + random.randint(-pixel_error_vertical, pixel_error_vertical))
+    new_x = int(base_x[img_idx] + random.randint(-pixel_error_horizontal, pixel_error_horizontal) - img_width / 2)
+    new_y = int(base_y[img_idx] + random.randint(-pixel_error_vertical, pixel_error_vertical) - img_height / 2)
 
-    background_img.paste(img, get_center_c(new_x, new_y, img, background_img), mask=img)
+    background_img.paste(img, (new_x, new_y), mask=img)
 
-    offsets.append(get_center_c(new_x, new_y, img, background_img))
+    offsets.append((new_x, new_y))
     rotations.append(rotation_angel)
     names.append(img_name)
 
